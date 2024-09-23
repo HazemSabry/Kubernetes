@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  user: <User Name>
+  app: <App Name>
+spec:
+  selector:
+    matchLabels:
+      user: <User Name>
+      app: <App Name>
+  template:
+    metadata:
+      labels:
+        user: <User Name>
+        app: <App Name>
+    spec:
+      containers:
+      - name: myapp
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: <Port>

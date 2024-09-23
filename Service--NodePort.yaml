@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  user: <User Name>
+  app: <App Name>
+spec:
+  type: NodePort
+  selector:
+    user: <User Name>
+    app: <App Name>
+  ports:
+  - port: <Port>
+    targetPort: <Target Port>
+    nodePort: <Node Port>
